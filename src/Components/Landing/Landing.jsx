@@ -10,8 +10,8 @@ const Landing = ({ dummyData }) => {
   const [ redirecting, setRedirecting ] = useState(false) 
 
   const handleLogin = () => {
-    window.location="http://localhost:8888/login";
-    // window.location="https://spotify2021-backend.herokuapp.com/login";
+    // window.location="http://localhost:8888/login";
+    window.location="https://spotify2021-backend.herokuapp.com/login";
     setRedirecting(true)
   }
 
