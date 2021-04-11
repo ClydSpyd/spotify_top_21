@@ -32,7 +32,8 @@ export const callSpotifyAPI = async (token, type, time_range) => {
             release_date: track.album.release_date,
           },
           preview_url:track.preview_url,
-          href:track.href
+          href:track.href,
+          uri:track.uri
         }
       })
     :
@@ -45,6 +46,5 @@ export const callSpotifyAPI = async (token, type, time_range) => {
           uri: artist.uri
         }
       })
-  console.log(formattedObject)
   return formattedObject
 }

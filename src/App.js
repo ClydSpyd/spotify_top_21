@@ -16,7 +16,6 @@ const App = ({}) => {
     const artists = await callSpotifyAPI(access_token, 'artists', 'long_term');
     const tracks = await callSpotifyAPI(access_token, 'tracks', 'long_term');
     setServerData({...serverData, tracks, artists })
-    
   }
 
 
@@ -25,7 +24,7 @@ const App = ({}) => {
   },[])
 
   const handleLogin = () => {
-    window.location="http://localhost:8888/login";
+    window.location="https://spotify2021-backend.herokuapp.com/login";
     setRedirecting(true)
   }
 
