@@ -21,7 +21,7 @@ const Landing = ({ dummyData }) => {
       <div className={styles.initialOverlay}>
           <div 
             onClick={handleLogin} 
-            className={styles.loginBtn}>
+            className={`${styles.loginBtn} ${redirecting && styles.disable}`}>
               {!redirecting?<span> <img className={styles.logo} src={logo} alt="logo" /> Get my top tracks</span>:<img className={styles.spinner} src={spinner} ></img>}
           </div>
 

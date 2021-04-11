@@ -24,8 +24,8 @@ const AppMain = ({ serverData: { artists, tracks } }) => {
           <div className={styles.column}>Album</div>
         </div>
         {tracks?.map((track, idx) => 
-          <div key={idx} className={`${styles.row}`}>
-            <div className={styles.column}><img onClick={()=>window.location=track.uri} src={play} alt="play"/></div>
+          <div key={idx} className={`${styles.row}`} onClick={()=>window.location=track.uri} >
+            <div className={styles.column}><img src={play} alt="play"/></div>
             <div className={styles.column}><p>{track.name}</p></div>
             <div className={styles.column}><p>{track.artist.name}</p></div>
             <div className={styles.column}><p>{track.album.name}</p></div>
