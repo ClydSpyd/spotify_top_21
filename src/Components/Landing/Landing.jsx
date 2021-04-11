@@ -16,7 +16,7 @@ const Landing = ({ dummyData }) => {
 
 
   return (
-    <div className={styles.landingContainer}> 
+    <section className={styles.landingContainer}> 
       <div className={styles.initialOverlay}>
           <div 
             onClick={handleLogin} 
@@ -27,7 +27,7 @@ const Landing = ({ dummyData }) => {
       </div>
       <AppMain serverData={dummyData} />
 
-    </div>
+    </section>
   )
 
 }
