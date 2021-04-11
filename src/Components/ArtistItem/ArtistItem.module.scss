@@ -1,0 +1,34 @@
+@import '../../App.scss';
+
+.artistItemContainer{
+  padding-top: 15px;
+  height: 220px;
+  min-width: 250px;
+  max-width: 33%;
+  flex-grow: 1;
+  border:1px solid $dark_grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $main_grey;
+
+  img{
+    height: 150px;
+    width: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  h5{
+    color: $main_green;
+    margin: 15px 0;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

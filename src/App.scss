@@ -1,3 +1,5 @@
+@import './Styles/variables.scss';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,17 +8,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* 
 :root{
   --main_green:#55BA55;
   --main_grey:#2C3134;
-}
+} */
 
 
 .App {
   width: 100vw;
-  height: 100vh;
-  background: var(--main_grey);
+  // min-height: 100vh;
+  background: $dark_grey;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -27,11 +29,12 @@ body {
 .App .loginBtn{
   margin-top: 20px;
   height: 30px;
-  width: 150px;
+  width: 170px;
+  font-size: 15px;
   line-height: 30px;
   padding: 0px 15px 3px 15px;
   color: #ffffff;
-  background-color: var(--main_green);
+  background-color: $main_green;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -42,6 +45,13 @@ body {
   cursor: pointer;
 }
 
+.loginBtn:hover{
+  -webkit-box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:    2px 3px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow:         2px 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
 .App img.spinner{
   height: 25px;
 }
+

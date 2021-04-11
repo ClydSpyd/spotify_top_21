@@ -1,0 +1,35 @@
+@import '../../App.scss';
+
+.appMain{
+  height: 100%;
+  width: 100%;
+
+  .typeHeader{
+    width: calc(width - 10px);
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing:border-box;
+    padding:0 15px;
+    background-color: $main_grey;
+    margin: 5px;
+
+    h4{
+      color:$main_green
+    }
+  }
+
+  .artistsContainer{
+    margin:5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tracksContainer{
+    margin:5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
