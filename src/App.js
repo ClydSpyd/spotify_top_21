@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react' 
 import queryString from 'query-string'
 import { callSpotifyAPI } from 'API/API.service';
-import spinner from 'Assets/Loaders/spin_white.svg'
 import './App.scss';
 import AppMain from 'Components/AppMain/AppMain';
+import { initialDummyData } from 'API/initialDummyData';
+import Landing from 'Components/Landing/Landing';
 
 
 const App = ({}) => {
 
   const [ serverData, setServerData ] = useState(null) 
-  const [ redirecting, setRedirecting ] = useState(false) 
   const { access_token } = queryString.parse(window.location.search)
 
   const getServerData = async () => {
@@ -19,24 +19,13 @@ const App = ({}) => {
   }
 
 
-  useEffect(()=>{
-    if(access_token){ getServerData() }
-  },[])
-
-  const handleLogin = () => {
-    window.location="https://spotify2021-backend.herokuapp.com/login";
-    setRedirecting(true)
-  }
+  useEffect(()=>{ if(access_token){ getServerData() } },[])
 
   return (
     <div className="App">
       { 
-        !serverData ?    
-          <div 
-            onClick={handleLogin} 
-            className="loginBtn">
-              {!redirecting?"Get my top tracks":<img className={"spinner"} src={spinner} ></img>}
-          </div>
+        !serverData ?   
+          <Landing dummyData={initialDummyData} />
         :
 
           <AppMain serverData={serverData} />

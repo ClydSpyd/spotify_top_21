@@ -24,33 +24,3 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.App .loginBtn{
-  margin-top: 20px;
-  height: 30px;
-  width: 170px;
-  font-size: 15px;
-  line-height: 30px;
-  padding: 0px 15px 3px 15px;
-  color: #ffffff;
-  background-color: $main_green;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-transform: capitalize;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
-}
-
-.loginBtn:hover{
-  -webkit-box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow:    2px 3px 3px 0px rgba(0, 0, 0, 0.5);
-  box-shadow:         2px 3px 3px 0px rgba(0, 0, 0, 0.5);
-}
-
-.App img.spinner{
-  height: 25px;
-}
-

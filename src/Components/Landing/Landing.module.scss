@@ -1,0 +1,66 @@
+@import '../../App.scss';
+
+.landingContainer{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+
+
+.loginBtn{
+  margin-top: 20px;
+  height: 45px;
+  width: 210px;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0px 20px 3px 15px;
+  color: #ffffff;
+  background-color: $main_green;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  bottom:10%;
+  cursor: pointer;
+
+
+  &:hover{
+    -webkit-box-shadow: 4px 4px 3px 0px #000000; 
+    box-shadow: 4px 4px 3px 0px #000000;
+    bottom:calc(10% + 2px);
+    right:2px
+  }
+
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  img.logo{
+    height: 35px;
+    margin-right: 10px;
+  }
+  
+  img.spinner{
+    height: 25px;
+  }
+}
+
+
+  .initialOverlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: #1f1f1fe0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

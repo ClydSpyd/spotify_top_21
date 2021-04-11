@@ -3,6 +3,7 @@ import React from 'react';
 
 import styles from './AppMain.module.scss';
 import play from 'Assets/Icons/play_white.png'
+import logo from 'Assets/spotify_green.png'
 
 const AppMain = ({ serverData: { artists, tracks } }) => {
 
@@ -30,6 +31,10 @@ const AppMain = ({ serverData: { artists, tracks } }) => {
             <div className={styles.column}><p>{track.album.name}</p></div>
           </div> 
           )}
+      </div>
+
+      <div className={styles.footer}>
+        <img src={logo} alt="logo"/>
       </div>
 
     </section>
