@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react' 
 import queryString from 'query-string'
-import { callSpotifyAPI } from 'API/API.service';
+import { getRecomendations, getTopData } from 'API/API.service';
 import './App.scss';
 import AppMain from 'Components/AppMain/AppMain';
 import { initialDummyData } from 'API/initialDummyData';
 import Landing from 'Components/Landing/Landing';
+import { getGenreArray } from 'Utils/getGenreArray';
 
 
 const App = ({}) => {
@@ -13,9 +14,10 @@ const App = ({}) => {
   const { access_token } = queryString.parse(window.location.search)
 
   const getServerData = async () => {
-    const artists = await callSpotifyAPI(access_token, 'artists', 'long_term');
-    const tracks = await callSpotifyAPI(access_token, 'tracks', 'long_term');
-    setServerData({...serverData, tracks, artists })
+    const artists = await getTopData(access_token, 'artists', 'long_term');
+    const tracks = await getTopData(access_token, 'tracks', 'long_term');
+    const recommendations = await getRecomendations(getGenreArray(artists), access_token)
+    setServerData({...serverData, tracks, artists, recommendations })
   }
 
 

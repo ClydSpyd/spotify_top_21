@@ -4,15 +4,16 @@ import React from 'react';
 import styles from './AppMain.module.scss';
 import play from 'Assets/Icons/play_white.png'
 import logo from 'Assets/spotify_green.png'
+import RecommendationItem from 'Components/RecomendationItem/RecommendationItem';
 
-const AppMain = ({ serverData: { artists, tracks } }) => {
+const AppMain = ({ serverData: { artists, tracks, recommendations } }) => {
 
   return (
     <section className={styles.appMain}>
 
       <div className={styles.typeHeader}> <h4>Your Top Artists</h4> </div>
       <div className={styles.artistsContainer}>
-        {artists?.map((artist, idx) => <ArtistItem artist={artist} /> )}
+        {artists?.map((artist, idx) => <ArtistItem key={idx} artist={artist} /> )}
       </div>
 
       <div className={styles.typeHeader}> <h4>Your Top Tracks</h4> </div>
@@ -33,8 +34,15 @@ const AppMain = ({ serverData: { artists, tracks } }) => {
           )}
       </div>
 
-      <div className={styles.footer}>
+      <div className={styles.recommendationsHeader}>
         <img src={logo} alt="logo"/>
+        <h4>Spotify's top picks for you</h4>
+      </div>
+
+      <div className={styles.recommendationsContainer}>
+        {
+          recommendations?.map((item, idx) => <RecommendationItem key={idx} item={item} />)
+        }
       </div>
 
     </section>
