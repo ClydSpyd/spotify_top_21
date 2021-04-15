@@ -6,6 +6,7 @@ import AppMain from 'Components/AppMain/AppMain';
 import { initialDummyData } from 'API/initialDummyData';
 import Landing from 'Components/Landing/Landing';
 import { getGenreArray } from 'Utils/getGenreArray';
+import axios from 'axios';
 
 
 const App = ({}) => {
